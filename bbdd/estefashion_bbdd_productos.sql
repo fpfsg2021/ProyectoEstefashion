@@ -16,27 +16,41 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `tipos_clientes`
+-- Table structure for table `productos`
 --
 
-DROP TABLE IF EXISTS `tipos_clientes`;
+DROP TABLE IF EXISTS `productos`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `tipos_clientes` (
+CREATE TABLE `productos` (
   `identificador` int(11) NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
-  PRIMARY KEY (`identificador`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+  `nombre` varchar(200) COLLATE utf8mb4_spanish_ci NOT NULL,
+  `descripcion` varchar(1000) COLLATE utf8mb4_spanish_ci NOT NULL,
+  `pvp` decimal(5,3) NOT NULL,
+  `sn` varchar(16) COLLATE utf8mb4_spanish_ci NOT NULL,
+  `imagen` varchar(10000) COLLATE utf8mb4_spanish_ci NOT NULL,
+  `color_predominante` varchar(20) COLLATE utf8mb4_spanish_ci DEFAULT NULL,
+  `stock` int(11) NOT NULL,
+  `temporada` tinyint(4) DEFAULT NULL,
+  `rebajado` tinyint(4) DEFAULT NULL,
+  `id_categoria` int(11) DEFAULT NULL,
+  `id_tipo_cliente` int(11) DEFAULT NULL,
+  PRIMARY KEY (`identificador`),
+  KEY `fk_productos_tipos_clientes_idx` (`id_tipo_cliente`),
+  KEY `fk_productos_categorias_idx` (`id_categoria`),
+  CONSTRAINT `fk_productos_categorias` FOREIGN KEY (`id_categoria`) REFERENCES `categorias` (`identificador`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_productos_tipos_clientes` FOREIGN KEY (`id_tipo_cliente`) REFERENCES `tipos_clientes` (`identificador`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `tipos_clientes`
+-- Dumping data for table `productos`
 --
 
-LOCK TABLES `tipos_clientes` WRITE;
-/*!40000 ALTER TABLE `tipos_clientes` DISABLE KEYS */;
-INSERT INTO `tipos_clientes` VALUES (1,'Hombre'),(2,'Mujer'),(3,'Niño'),(4,'Extraterrestre'),(5,'Zombies');
-/*!40000 ALTER TABLE `tipos_clientes` ENABLE KEYS */;
+LOCK TABLES `productos` WRITE;
+/*!40000 ALTER TABLE `productos` DISABLE KEYS */;
+INSERT INTO `productos` VALUES (1,'Pantalón vaquero','Pantalón vaquero de pitillo con piel de lagarto',99.999,'SN382839','nodisponible.png','Rojo',5,0,1,4,1);
+/*!40000 ALTER TABLE `productos` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

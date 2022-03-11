@@ -16,27 +16,31 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `tipos_clientes`
+-- Table structure for table `pedidos`
 --
 
-DROP TABLE IF EXISTS `tipos_clientes`;
+DROP TABLE IF EXISTS `pedidos`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `tipos_clientes` (
+CREATE TABLE `pedidos` (
   `identificador` int(11) NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
-  PRIMARY KEY (`identificador`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+  `id_cliente` int(11) NOT NULL,
+  `fecha` date NOT NULL,
+  `importe` int(11) NOT NULL,
+  `observaciones` varchar(1000) COLLATE utf8mb4_spanish_ci DEFAULT NULL,
+  PRIMARY KEY (`identificador`),
+  KEY `fk_pedidos_clientes_idx` (`id_cliente`),
+  CONSTRAINT `fk_pedidos_clientes` FOREIGN KEY (`id_cliente`) REFERENCES `clientes` (`identificador`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `tipos_clientes`
+-- Dumping data for table `pedidos`
 --
 
-LOCK TABLES `tipos_clientes` WRITE;
-/*!40000 ALTER TABLE `tipos_clientes` DISABLE KEYS */;
-INSERT INTO `tipos_clientes` VALUES (1,'Hombre'),(2,'Mujer'),(3,'Niño'),(4,'Extraterrestre'),(5,'Zombies');
-/*!40000 ALTER TABLE `tipos_clientes` ENABLE KEYS */;
+LOCK TABLES `pedidos` WRITE;
+/*!40000 ALTER TABLE `pedidos` DISABLE KEYS */;
+/*!40000 ALTER TABLE `pedidos` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

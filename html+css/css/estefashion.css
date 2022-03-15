@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
+
+* {
+    font-family: 'League Gothic', sans-serif;
+}
+
+body {
+    background-color: white;
+    margin:0px;
+}
+
+header {
+    height: 100px;
+    color:rgb(189,140,235);
+}
+#header_izquierdo {
+    width: 25%;
+    float: left;
+}
+#header_central {
+    width: 50%;
+    float:left;
+    text-align: center;
+}
+#header_central h1{
+    font-size: 4em;
+    margin-top: 0.25em;
+}
+
+#header_derecho {
+    margin-top: 30px;
+    width: 25%;
+    float:right;
+    text-align: right;
+}
+
+#header_derecho div {
+    display: inline;
+    margin-right: 5px;
+}
+
+#buscador_header input{
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+    border-bottom: 1px;
+    border-style: solid;
+    vertical-align: top;
+}
+
+.header_icons {
+    width: 20px;
+}

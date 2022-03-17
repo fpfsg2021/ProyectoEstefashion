@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Gothic&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 770px) {
+  .container {
+    display: flexbox;
+    flex-flow: column;
+  }
+}
+
+/*  */
+nav {
+  background-color: rgb(210 210 210);
+}
+
+body {
+  background-color: rgb(255, 228, 196);
+}
+
+nav div {
+  display: inline-flex;
+  align-items: center;
+}
+/*  */
+
+.container {
+  /* contenedor que contiene todo */
+  display: flex;
+  flex-flow: row;
+}
+
+/* ICONOS */
+.iconos {
+  margin-left: 40px;
+}
+
+.icono-user,
+.icono-cesta {
+  padding: 5px;
+}
+
+.fa-user:hover,
+.fa-shopping-cart:hover {
+  color: rgb(189, 140, 235);
+}
+/* FIN ICONOS */
+
+/* FORMULARIO DE BÚSQUEDA */
+
+div form {
+  margin-left: 224%;
+}
+
+input:hover {
+  border-radius: 5px;
+}
+
+button:hover {
+  border-radius: 1px;
+  color: rgb(189, 140, 235);
+  background-color: rgb(255, 228, 196);
+
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+/* FIN DEL FORMULARIO DE BÚSQUEDA */
+
+/* imagen estefashion */
+#logotipo {
+  margin: 0px -2px 5px 4px;
+  width: 107px;
+}
+
+/* {{nombreEmpresa}} */
+.estefashion {
+  font-family: "League Gothic", sans-serif;
+  margin-left: 165%;
+}
+
+.divnombreEmpresa {
+  margin-left: 21%;
+  font-size: xx-large;
+}
+
+/*  */
+
+.ul-listaiconos {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}

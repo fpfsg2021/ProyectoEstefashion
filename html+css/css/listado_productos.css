@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
+
+.contenido {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'League Gothic', sans-serif;
+}
+
+.contenido .tres_columnas {
+    box-sizing: border-box;
+    flex-grow: 1;
+    width: 100%;  
+    padding: 0.8em 1.2em;
+    overflow: hidden;
+    list-style: none;
+    margin: auto;
+}
+
+.columna  { width: 29.33%; float: left; padding: 2%;}
+
+.columna img {
+    /* -- */
+    display: block;
+    margin: auto;
+    width: 100%;
+}
+
+.columna .nombre_producto {
+    margin-top: 1%;
+    text-align: center;
+    font-size: 1.5em;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    color: rgb(185, 185, 185);
+    width: 90%;
+    overflow: hidden;
+    margin-top: 0.5em;
+    padding-bottom: 10%;
+}
+
+.columna .contenedor_corazon {
+    /*display: block;*/
+    width: 10%;
+}
+
+.columna .contenedor_corazon .corazon {
+    width: 80%;
+    margin-top: 0.8em;
+    cursor: pointer;
+}
+
+.columna .contenedor_corazon, .columna .nombre_producto{
+    float: left;
+}
+
+.precio_producto {
+    width: 100%;
+    clear: left;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.colores_producto {
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: lightgrey;
+}
+
+@media (max-width: 1444px) {
+    .columna .corazon {
+        width: 2.2vw;
+        margin-top: 1.2em;
+        cursor: pointer;
+        max-width: 41px;
+    }
+
+    .columna .nombre_producto {
+        font-size: 1.3em;
+        color: rgb(185, 185, 185);
+        width: 90%;
+    }
+}
+
+@media (max-width: 1041px) {
+    .columna .corazon {
+        width: 2.5vw;
+        margin-top: 1.5em;
+        max-width: 41px;
+    }
+
+    .columna .nombre_producto {
+        font-size: 1.2em;
+    }
+
+    .columna .colores_producto {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 912px) {
+    .columna .corazon {
+        width: 1.8vw;
+        margin-top: 1.9em;
+    }
+}
+
+@media (max-width: 800px) {
+    .columna .corazon {
+        width: 2vw;
+        margin-top: 0.7em;
+    }
+    
+    .columna .nombre_producto {
+        font-size: 0.7em;
+        margin-top: 0.8em;
+    }
+
+    .columna .precio_producto {
+        font-size: 0.8em;
+    }
+
+    .columna .colores_producto {
+        font-size: 0.6em;
+    }
+}
+
+
+/* Extras Leo */
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}

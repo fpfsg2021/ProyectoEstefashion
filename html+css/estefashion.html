@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/estafashion.js"></script>
+    <link rel="stylesheet" href="./css/encabezado_pagina.css">
+    <link rel="stylesheet" href="./css/listado_productos.css">
+    <link rel="stylesheet" href="./css/pie_pagina.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <title>Contenido de Tienda de Ropa</title>
+</head>
+
+<body>
+    <header>
+        <nav id="contenedor-principal">
+            <div class="container">
+                <!-- CONTENEDOR DEL LOGO -->
+                <div class="logo">
+                    <img id="logotipo" src="./images/logo.png">
+                </div>
+                <!-- FINAL CONTENEDOR DEL LOGO -->
+
+                <!-- CONTENEDOR DE ESTEFASHION -->
+                <div class="divnombreEmpresa">
+                    <h1 class="estefashion">ESTEFASHION</h1>
+                </div>
+                <!-- FINAL CONTENEDOR DE ESTEFASHION -->
+
+                <!-- CONTENEDOR DE BÚSQUEDA E ICONOS -->
+                <div class="busqueda-e-iconos">
+                    <!-- contenedor busqueda -->
+                    <div class="formulario">
+                        <form>
+                            <input class="formulario" type="search" placeholder="Buscar" aria-label="Buscar">
+                            <button class="boton-buscar" type="submit">Buscar</button>
+                        </form>
+                        <!-- fin de contenedor formulario -->
+
+                        <!-- contenedor iconos -->
+                        <div class="iconos">
+                            <ul class="ul-listaiconos">
+
+                                <!-- icono: cesta de la compra -->
+                                <li class="icono-cesta">
+                                    <a class="nav-link" href="#">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </a>
+                                </li>
+                                <!-- fin icono: cesta -->
+
+                                <!--icono: usuario -->
+                                <li class="icono-user">
+                                    <a class="icono-user1" href="#" id="navbarDropdown" role="button"
+                                        aria-expanded="false">
+                                        <i class="fas fa-user"></i>
+                                    </a>
+                                    <!-- fin icono: usuario -->
+
+
+                                    <!-- menú desplegable del icono usuario 
+        
+                                    ---ESTO ESTA APARTADO PARA SABER SI HACER UN MENU DESPLEGABLE CON JAVASCRIPT 
+                                    O CON HTML Y CSS---
+        
+                                    <ul class="menu-desplegable" aria-labelledby="navbarDropdown">
+                                        <li>
+                                            <a class="desplegables" href="#">Iniciar sesion</a>
+                                        </li>
+                                        <li>
+                                            <a class="desplegables" href="#">Registro</a>
+                                        </li>
+                                        <li>
+                                            <a class="desplegables" href="#">Ayuda</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                             fin menú desplegable-->
+                                    <!-- fin contenedor iconos -->
+                                    <!-- CONTENEDOR DE BÚSQUEDA E ICONOS -->
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="contenido">
+            <div class="tres_columnas noselect">
+                <div class="columna">
+                    <img src="https://static.zara.net/photos///2022/V/0/2/p/6085/322/300/2/w/231/6085322300_2_1_1.jpg?ts=1640796591299"
+                        alt="">
+                    <a href="#enlace" class="nombre_producto">Camisa de Playuqui Fashion</a>
+                    <div class="contenedor_corazon">
+                        <img id="h1" class="corazon" src="./images/heart.png" onclick="marcaFavorito(event)">
+                    </div>
+                    <p class="precio_producto">45,99€</p>
+                    <a href="#enlace" class="colores_producto">+3 Colores</a>
+                </div>
+                <div class="columna">
+                    <img src="https://static.zara.net/photos///2022/V/0/2/p/7545/200/330/2/w/199/7545200330_2_3_1.jpg?ts=1646744401841"
+                        alt="">
+                    <a href="#enlace" class="nombre_producto">Camiseta de Sofa Viejo</a>
+                    <div class="contenedor_corazon">
+                        <img id="h2" class="corazon" src="./images/heart.png" onclick="marcaFavorito(event)">
+                    </div>
+                    <p class="precio_producto">45,99€</p>
+                    <a href="#enlace" class="colores_producto">+3 Colores</a>
+                </div>
+                <div class="columna">
+                    <img src="https://static.zara.net/photos///2022/V/0/2/p/7545/414/661/2/w/231/7545414661_2_1_1.jpg?ts=1638358449615"
+                        alt="">
+                    <a href="#enlace" class="nombre_producto">Camisa de Trapo de Cocina</a>
+                    <div class="contenedor_corazon">
+                        <img class="corazon" src="./images/heart.png">
+                    </div>
+                    <p class="precio_producto">45,99€</p>
+                    <a href="#enlace" class="colores_producto">+3 Colores</a>
+                </div>
+                <div class="columna">
+                    <img src="https://static.zara.net/photos///2022/V/0/2/p/6085/322/300/2/w/231/6085322300_2_1_1.jpg?ts=1640796591299"
+                        alt="">
+                    <a href="#enlace" class="nombre_producto">Camisa de Playuqui Fashion</a>
+                    <div class="contenedor_corazon">
+                        <img class="corazon" src="./images/heart.png">
+                    </div>
+                    <p class="precio_producto">45,99€</p>
+                    <a href="#enlace" class="colores_producto">+3 Colores</a>
+                </div>
+                <div class="columna">
+                    <img src="https://static.zara.net/photos///2022/V/0/2/p/7545/200/330/2/w/199/7545200330_2_3_1.jpg?ts=1646744401841"
+                        alt="">
+                    <a href="#enlace" class="nombre_producto">Camiseta de Sofa Viejo</a>
+                    <div class="contenedor_corazon">
+                        <img class="corazon" src="./images/heart.png">
+                    </div>
+                    <p class="precio_producto">45,99€</p>
+                    <a href="#enlace" class="colores_producto">+3 Colores</a>
+                </div>
+                <div class="columna">
+                    <img src="https://static.zara.net/photos///2022/V/0/2/p/7545/414/661/2/w/231/7545414661_2_1_1.jpg?ts=1638358449615"
+                        alt="">
+                    <a href="#enlace" class="nombre_producto">Camisa de Trapo de Cocina</a>
+                    <div class="contenedor_corazon">
+                        <img class="corazon" src="./images/heart.png">
+                    </div>
+                    <p class="precio_producto">45,99€</p>
+                    <a href="#enlace" class="colores_producto">+3 Colores</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div id="divcontainer">
+            <br>
+            <div id="lista">
+                <ul id="footer">
+                    <li>Contacto</li>
+                    <li>Quienes somos</li>
+                    <li>Trabaja con nosotros</li>
+                    <li> Aviso legal
+                    <li>
+                </ul>
+            </div>
+            <div id="redes">
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://espai.es" target="_blank"><img
+                        class="logo" src="./images/facebook.png"></a>
+                <a href="https://twitter.com/intent/tweet?text= escola%20inform%C3%A1tica%20i%20disseny&url=https://espai.es&hashtags=dissenyweb"
+                    target="_blank"><img class="logo" src="./images/twitter.png"></a>
+                <a href="https://api.whatsapp.com/send?text=escola%20inform%C3%A1tica%20i%20disseny%20https://espai.es"
+                    target="_blank"><img class="logo" src="./images/whatsapp.png"></a>
+                <a href="https://www.instagram.com/?hl=es" target="_blank"><img class="logo"
+                        src="./images/instagram.png"></a>
+                <div class="copyright">
+                    <p>&copy;Estefashion 2022</p>
+                </div>
+            </div>
+    </footer>
+</body>
+
+</html>

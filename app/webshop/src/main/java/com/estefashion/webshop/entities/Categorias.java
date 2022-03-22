@@ -19,6 +19,12 @@ public class Categorias {
 		super();
 	}
 	
+	public Categorias(String nombre, String imagen) {
+		super();
+		this.nombre = nombre;
+		this.imagen = imagen;
+	}
+
 	public Categorias(int identificador, String nombre, String imagen) {
 		super();
 		this.identificador = identificador;

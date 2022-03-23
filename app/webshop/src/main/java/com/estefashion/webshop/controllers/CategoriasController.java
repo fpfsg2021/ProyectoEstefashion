@@ -23,6 +23,7 @@ public class CategoriasController {
 		if (nombre!=null) {
 			Categorias c = new Categorias(nombre, imagen);
 			categoriasService.addCategorias(c);
+			return new ModelAndView("redirect:/crearCategorias");
 		}
 		List<Categorias> categorias = categoriasService.findAll();
 		ModelAndView mav = new ModelAndView();
@@ -30,6 +31,5 @@ public class CategoriasController {
 		mav.addObject("tipos_categorias",categorias);
 		return mav;
 	}
-			
-			
+	
 }

@@ -6,7 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity(name="categorias") //Se indica el nombre de la tabla
-public class Categorias {
+public class Categoria {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,17 +15,17 @@ public class Categorias {
 	private String imagen;
 	
 	//De aquí hasta abajo todo se genera con el generador de código
-	public Categorias() {
+	public Categoria() {
 		super();
 	}
 	
-	public Categorias(String nombre, String imagen) {
+	public Categoria(String nombre, String imagen) {
 		super();
 		this.nombre = nombre;
 		this.imagen = imagen;
 	}
 
-	public Categorias(int identificador, String nombre, String imagen) {
+	public Categoria(int identificador, String nombre, String imagen) {
 		super();
 		this.identificador = identificador;
 		this.nombre = nombre;

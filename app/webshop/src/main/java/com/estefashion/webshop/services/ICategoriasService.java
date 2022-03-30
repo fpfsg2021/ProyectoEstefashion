@@ -1,10 +1,10 @@
 package com.estefashion.webshop.services;
 import java.util.List;
 
-import com.estefashion.webshop.entities.Categorias;
+import com.estefashion.webshop.entities.Categoria;
 
 
 public interface ICategoriasService {
-	public void addCategorias(Categorias c);
-	public List<Categorias> findAll();
+	public void add(Categoria c);
+	public List<Categoria> findAll();
 }
